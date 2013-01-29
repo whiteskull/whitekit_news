@@ -1,8 +1,18 @@
 require "whitecms_news/version"
-require "app"
+require 'active_support/dependencies'
 
 module WhitecmsNews
-  def self.lorem
-    "Lorem ipsum dolor sit amet, consectetur adipisicing ...."
+
+  # Our host application root path
+  # We set this when the engine is initialized
+  mattr_accessor :app_root
+
+  # Yield self on setup for nice config blocks
+  def self.setup
+    yield self
   end
+
 end
+
+# Require our engine
+require 'whitecms_news/engine'
