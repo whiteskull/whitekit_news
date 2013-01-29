@@ -1,5 +1,4 @@
 require "whitecms_news/version"
-require "app"
 
 module WhitecmsNews
   def self.lorem
