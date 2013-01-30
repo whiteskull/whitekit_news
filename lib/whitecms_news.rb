@@ -1,11 +1,9 @@
-require "whitecms_news/version"
 require 'active_support/dependencies'
 
-module WhitecmsNews
+require "whitecms_news/version"
+require 'whitecms_news/engine'
 
-  # Our host application root path
-  # We set this when the engine is initialized
-  mattr_accessor :app_root
+module WhitecmsNews
 
   # Yield self on setup for nice config blocks
   def self.setup
@@ -13,6 +11,3 @@ module WhitecmsNews
   end
 
 end
-
-# Require our engine
-require 'whitecms_news/engine'

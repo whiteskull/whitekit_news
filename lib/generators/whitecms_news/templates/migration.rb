@@ -1,4 +1,4 @@
-class CreateWhiteNewsMembers < ActiveRecord::Migration
+class WhitecmsNewsCreateWhiteNews < ActiveRecord::Migration
   def change
     create_table :white_news do |t|
       t.string :title

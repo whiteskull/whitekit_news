@@ -4,6 +4,7 @@ require 'rails/generators/migration'
 
 class WhitecmsNewsGenerator < Rails::Generators::Base
   include Rails::Generators::Migration
+
   def self.source_root
     @source_root ||= File.join(File.dirname(__FILE__), 'templates')
   end
@@ -17,6 +18,6 @@ class WhitecmsNewsGenerator < Rails::Generators::Base
   end
 
   def create_migration_file
-    migration_template 'migration.rb', 'db/migrate/create_white_news_table.rb'
+    migration_template 'migration.rb', 'db/migrate/whitecms_news_create_white_news.rb'
   end
 end

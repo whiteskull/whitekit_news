@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get 'news' => 'whitecms_news/team#index' , as: 'white_news'
+#WhitecmsNews::Engine.routes.draw do
 end
