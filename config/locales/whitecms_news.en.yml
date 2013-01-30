@@ -1,5 +1,7 @@
 en:
   whitecms_news:
     title:
+      main: 'News'
       latest: 'Latest news'
     no: 'There is no news'
+    omission: '...'

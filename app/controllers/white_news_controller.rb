@@ -1,5 +1,5 @@
 class WhiteNewsController < ApplicationController
   def index
-    @news = WhiteNews.all
+    @news = WhiteNews.visible
   end
 end

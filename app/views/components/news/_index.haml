@@ -1,6 +1,10 @@
 %h2= t('whitecms_news.title.latest')
-- if news.present?
-  - news.each do |one|
-    = one.title
+- if news_component.present?
+  - news_component.each do |news|
+    = div_for news do
+      %span.date= news.updated_at.to_formatted_s :short
+      %span.title= truncate news.title, length: options[:title_length], omission: t('whitecms_news.omission')
+      - if options[:content_view]
+        %p.content= strip_tags truncate(news.content, length: options[:content_length], omission: t('whitecms_news.omission'))
 - else
   = t('whitecms_news.no')

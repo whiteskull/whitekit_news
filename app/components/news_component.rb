@@ -1,6 +1,12 @@
 class NewsComponent < BaseComponent
   def main
-    @options[:count] ||= 3
+    defaults = {
+        count: 5,
+        title_length: 50,
+        content_length: 200,
+        content_view: true,
+    }
+    @options = @options.reverse_merge(defaults)
 
     view_news
   end
@@ -9,9 +15,9 @@ class NewsComponent < BaseComponent
   def view_news
     case @options[:type]
       when 'latest'
-        @news = WhiteNews.latest(@options[:count])
+        @news_component = WhiteNews.latest(@options[:count].to_i)
       else
-        @news = false
+        @news_component = false
     end
   end
 end

@@ -1,6 +1,3 @@
-%h1 News
-- @news.each do |news|
-  = div_for news do
-    = news.title
-    = news.content
+%h1= t('whitecms_news.title.main')
+= render partial: 'white_news/news', collection: @news
 
