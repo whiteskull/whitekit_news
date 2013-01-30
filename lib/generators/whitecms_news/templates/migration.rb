@@ -3,6 +3,7 @@ class WhitecmsNewsCreateWhiteNews < ActiveRecord::Migration
     create_table :white_news do |t|
       t.string :title
       t.text :content
+      t.boolean :hidden, default: false
 
       t.timestamps
     end

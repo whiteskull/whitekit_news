@@ -1,3 +1,6 @@
-Hello, World!
-This is the page
-Count is
+%h2= t('whitecms_news.title.latest')
+- if news.present?
+  - news.each do |one|
+    = one.title
+- else
+  = t('whitecms_news.no')
