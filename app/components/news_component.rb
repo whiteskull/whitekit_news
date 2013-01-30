@@ -5,6 +5,7 @@ class NewsComponent < BaseComponent
         title_length: 50,
         content_length: 200,
         content_view: true,
+        date_view: true
     }
     @options = @options.reverse_merge(defaults)
 
