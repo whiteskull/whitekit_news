@@ -1,5 +1,6 @@
 = div_for news do
   %span.date-publication= t('whitecms_news.date_publication')
   %span.date= news.updated_at.to_formatted_s :short
-  %h3= news.title
+  %h3= link_to news.title, white_news_path(news)
   = sanitize news.content
+  = link_to t('whitecms_news.more'), white_news_path(news), class: 'more'

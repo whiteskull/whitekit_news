@@ -4,9 +4,12 @@
     = div_for news do
       - if options[:date_view]
         %span.date= news.updated_at.to_formatted_s :short
-      %span.title= truncate news.title, length: options[:title_length], omission: t('whitecms_news.omission')
+      %span.title
+        = link_to truncate(news.title, length: options[:title_length], omission: t('whitecms_news.omission')),
+                  white_news_path(news)
       - if options[:content_view]
-        %p.content= strip_tags truncate(news.content, length: options[:content_length], omission: t('whitecms_news.omission'))
-      = link_to t('whitecms_news.more'), white_news_
+        %br/
+        %span.content= strip_tags truncate(news.content, length: options[:content_length], omission: t('whitecms_news.omission'))
+      = link_to t('whitecms_news.more'), white_news_path(news), class: 'more'
 - else
-  = t('whitecms_news.no')
+  = t('whitecms_news.no_news')

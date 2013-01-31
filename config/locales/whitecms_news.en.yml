@@ -3,7 +3,9 @@ en:
     title:
       main: 'News'
       latest: 'Latest news'
-    no: 'There is no news'
+    no_news: 'There is no news'
+    no_one_news: 'There is no news'
     omission: '...'
     date_publication: 'Date of publication:'
     more: 'More...'
+    all: 'All news'

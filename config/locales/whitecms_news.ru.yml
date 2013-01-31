@@ -1,9 +1,11 @@
-en:
+ru:
   whitecms_news:
     title:
       main: 'Новости'
       latest: 'Последние новости'
-    no: 'Новостей нет'
+    no_news: 'Новостей нет'
+    no_one_news: 'Такой новости нет'
     omission: '...'
-    date_publication: 'Дата публикации:'
+    date_publication: 'Дата публикпции:'
     more: 'Подробнее...'
+    all: 'Все новости'

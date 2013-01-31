@@ -1,0 +1,11 @@
+- if @news.present?
+  = div_for @news, :detail do
+    %span.date-publication= t('whitecms_news.date_publication')
+    %span.date= @news.updated_at.to_formatted_s :short
+    %h1= @news.title
+    = sanitize @news.content
+- else
+  = t('whitecms_news.no_one.news')
+
+#all-news
+  = link_to t('whitecms_news.all'), white_news_index_path, class: 'all'
