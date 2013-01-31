@@ -4,3 +4,5 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'kaminari'
+gem 'carrierwave'
+gem 'mini_magick'
