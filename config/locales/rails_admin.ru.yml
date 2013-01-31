@@ -1,0 +1,13 @@
+ru:
+  activerecord:
+    models:
+      white_news: 'Новости'
+    attributes:
+      white_news:
+        title: 'Заголовок'
+        content: 'Содержимое'
+        hidden: 'Скрытая'
+        image: 'Изображение'
+  admin:
+    misc:
+      navigation_white_news: 'Новости'

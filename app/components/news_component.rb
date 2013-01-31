@@ -7,7 +7,7 @@ class NewsComponent < BaseComponent
         content_view: true,
         date_view: true
     }
-    @options = @options.reverse_merge(defaults)
+    merge(defaults)
 
     view_news
   end

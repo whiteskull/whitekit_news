@@ -3,9 +3,11 @@
     %span.date-publication= t('whitecms_news.date_publication')
     %span.date= @news.updated_at.to_formatted_s :short
     %h1= @news.title
-    = sanitize @news.content
+    = image_tag @news.image.preview.url
+    = raw @news.content
+    = edit_news_for_admin
 - else
-  = t('whitecms_news.no_one.news')
-
+  = t('whitecms_news.no_one_news')
 #all-news
   = link_to t('whitecms_news.all'), white_news_index_path, class: 'all'
+
