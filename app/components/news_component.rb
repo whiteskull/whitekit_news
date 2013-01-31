@@ -5,7 +5,8 @@ class NewsComponent < BaseComponent
         title_length: 50,
         content_length: 200,
         content_view: true,
-        date_view: true
+        date_view: true,
+        type: :latest
     }
     merge(defaults)
 
