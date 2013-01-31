@@ -1,9 +1,9 @@
 require 'active_support/dependencies'
 
-require "whitecms_news/version"
-require 'whitecms_news/engine'
+require "whitekit_news/version"
+require 'whitekit_news/engine'
 
-module WhitecmsNews
+module WhitekitNews
 
   # Yield self on setup for nice config blocks
   def self.setup

@@ -1,5 +1,5 @@
-class WhiteNews < ActiveRecord::Base
-  mount_uploader :image, WhiteNewsImageUploader
+class News < ActiveRecord::Base
+  mount_uploader :image, NewsImageUploader
 
   default_scope order('updated_at DESC')
 

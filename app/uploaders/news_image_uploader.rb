@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class WhiteNewsImageUploader < CarrierWave::Uploader::Base
+class NewsImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick

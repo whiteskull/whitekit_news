@@ -1,8 +1,8 @@
 en:
   activerecord:
     models:
-      white_news: 'News'
+      news: 'News'
   admin:
     misc:
-      navigation_white_news: 'News'
+      navigation_news: 'News'
 

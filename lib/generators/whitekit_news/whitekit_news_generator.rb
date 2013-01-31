@@ -2,7 +2,7 @@
 require 'rails/generators'
 require 'rails/generators/migration'
 
-class WhitecmsNewsGenerator < Rails::Generators::Base
+class WhitekitNewsGenerator < Rails::Generators::Base
   include Rails::Generators::Migration
 
   def self.source_root
@@ -18,6 +18,6 @@ class WhitecmsNewsGenerator < Rails::Generators::Base
   end
 
   def create_migration_file
-    migration_template 'migration.rb', 'db/migrate/whitecms_news_create_white_news.rb'
+    migration_template 'migration.rb', 'db/migrate/whitekit_news_create_news.rb'
   end
 end

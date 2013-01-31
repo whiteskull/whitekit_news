@@ -1,13 +1,13 @@
 - if @news.present?
   = div_for @news, :detail do
-    %span.date-publication= t('whitecms_news.date_publication')
+    %span.date-publication= t('whitekit_news.date_publication')
     %span.date= @news.updated_at.to_formatted_s :short
     %h1= @news.title
     = image_tag @news.image.preview.url
     = raw @news.content
     = edit_news_for_admin
 - else
-  = t('whitecms_news.no_one_news')
+  = t('whitekit_news.no_one_news')
 #all-news
-  = link_to t('whitecms_news.all'), white_news_index_path, class: 'all'
+  = link_to t('whitekit_news.all'), news_index_path, class: 'all'
 

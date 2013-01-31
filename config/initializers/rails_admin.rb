@@ -2,10 +2,10 @@ RailsAdmin.config do |config|
 
   ################  Model configuration  ################
 
-  # Setting WhiteNews model
-  config.model WhiteNews do
+  # Setting News model
+  config.model News do
     weight 6
-    navigation_label I18n.t('admin.misc.navigation_white_news')
+    navigation_label I18n.t('admin.misc.navigation_news')
     list do
       field :id
       field :title

@@ -1,15 +1,15 @@
-%h2= t('whitecms_news.title.latest')
+%h2= t('whitekit_news.title.latest')
 - if news_component.present?
   - news_component.each do |news|
     = div_for news do
       - if options[:date_view]
         %span.date= news.updated_at.to_formatted_s :short
       %span.title
-        = link_to truncate(news.title, length: options[:title_length], omission: t('whitecms_news.omission')),
-                  white_news_path(news)
+        = link_to truncate(news.title, length: options[:title_length], omission: t('whitekit_news.omission')),
+                  news_path(news)
       - if options[:content_view]
         %br/
-        %span.content= strip_tags truncate(news.content, length: options[:content_length], omission: t('whitecms_news.omission'))
-      = link_to t('whitecms_news.more'), white_news_path(news), class: 'more'
+        %span.content= strip_tags truncate(news.content, length: options[:content_length], omission: t('whitekit_news.omission'))
+      = link_to t('whitekit_news.more'), news_path(news), class: 'more'
 - else
-  = t('whitecms_news.no_news')
+  = t('whitekit_news.no_news')

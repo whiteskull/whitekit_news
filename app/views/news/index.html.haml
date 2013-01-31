@@ -1,0 +1,8 @@
+%h1= t('whitekit_news.title.main')
+= add_news_for_admin
+- if @news.present?
+  = render partial: 'news/news', collection: @news, spacer_template: 'news/news_spacer'
+  = paginate @news
+- else
+  %p= t('whitekit_news.no_news')
+

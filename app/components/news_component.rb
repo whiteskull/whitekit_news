@@ -16,7 +16,7 @@ class NewsComponent < BaseComponent
   def view_news
     case @options[:type]
       when 'latest'
-        @news_component = WhiteNews.latest(@options[:count].to_i)
+        @news_component = News.latest(@options[:count].to_i)
       else
         @news_component = false
     end

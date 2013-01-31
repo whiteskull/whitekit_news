@@ -1,6 +1,6 @@
-class WhitecmsNewsCreateWhiteNews < ActiveRecord::Migration
+class WhitekitNewsCreateNews < ActiveRecord::Migration
   def change
-    create_table :white_news do |t|
+    create_table :news do |t|
       t.string :title
       t.text :content
       t.boolean :hidden, default: false
