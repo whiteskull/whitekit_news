@@ -1,4 +1,8 @@
 %h1= t('whitecms_news.title.main')
-= render partial: 'white_news/news', collection: @news, spacer_template: 'white_news/news_spacer'
-= paginate @news
+- if @news
+  = add_news_for_admin
+  = render partial: 'white_news/news', collection: @news, spacer_template: 'white_news/news_spacer'
+  = paginate @news
+- else
+  = t('whitecms_news.no_news')
 
