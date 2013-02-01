@@ -7,7 +7,7 @@ This is a News for [WhiteKit](https://github.com/whiteskull/whitekit)
 Add this line (or uncomment) to your WhiteKit's  Gemfile:
 
 ```ruby
-    gem 'whitekit_news'
+gem 'whitekit_news'
 ```
 
 And then execute:
@@ -15,14 +15,6 @@ And then execute:
 ```bash
 $ bundle install
 ````
-
-Then you need add (or uncomment) routes for news in routes.rb
-
-```ruby
-resources :news, only: [:index, :show] do
-  get 'page/:page', action: :index, on: :collection
-end
-```
 
 Then run
 
@@ -34,6 +26,14 @@ And then
 
 ```bash
 $ rake db:migrate
+```
+
+Then you need add (or uncomment) routes for news in routes.rb
+
+```ruby
+resources :news, only: [:index, :show] do
+  get 'page/:page', action: :index, on: :collection
+end
 ```
 
 ## Usage
