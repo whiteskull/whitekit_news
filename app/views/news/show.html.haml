@@ -3,7 +3,8 @@
     %span.date-publication= t('whitekit_news.date_publication')
     %span.date= @news.updated_at.to_formatted_s :short
     %h1= @news.title
-    = image_tag @news.image.preview.url
+    - if @news.image.present?
+      = link_to image_tag(@news.image.preview.url), @news.image.url, title: @news.title, rel: 'lightbox'
     = raw @news.content
     = edit_news_for_admin
 - else
