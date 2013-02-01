@@ -1,24 +1,63 @@
 # WhitekitNews
 
-TODO: Write a gem description
+This is a News for [WhiteKit](https://github.com/whiteskull/whitekit)
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line (or uncomment) to your WhiteKit's  Gemfile:
 
+```ruby
     gem 'whitekit_news'
+```
 
 And then execute:
 
-    $ bundle
+```bash
+$ bundle install
+````
 
-Or install it yourself as:
+Then you need add (or uncomment) routes for news in routes.rb
 
-    $ gem install whitekit_news
+```ruby
+resources :news, only: [:index, :show] do
+  get 'page/:page', action: :index, on: :collection
+end
+```
+
+Then run
+
+```bash
+$ rails g whitekit_news
+````
+
+And then
+
+```bash
+$ rake db:migrate
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+Now page with news available at
+
+/news
+
+In admin part you can add, edit and remove news
+
+## Component news
+
+This gem also creates component of news. You can add it in to the block. The component of news takes some params.
+
+Example default
+
+```text
+count: 5,
+title_length: 50,
+content_length: 200,
+content_view: true,
+date_view: true,
+type: :latest
+```
 
 ## Contributing
 
