@@ -24,7 +24,7 @@ type: [:latest] type of render
 
   # View news depending on the type of
   def view_news
-    case @options[:type]
+    case @options[:type].to_s
       when 'latest'
         @news_component = News.latest(@options[:count].to_i)
       else
