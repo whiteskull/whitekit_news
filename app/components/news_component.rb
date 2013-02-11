@@ -1,4 +1,13 @@
 class NewsComponent < BaseComponent
+  PARAMS_DESCRIPTION = <<-DESCRIPTION
+count: [integer] the number of news
+title_length: [integer] length of title
+content_length: [integer] length of content
+content_view: [true or false] show content or not
+date_view: [true or false] show date or not
+type: [:latest] type of render
+  DESCRIPTION
+
   def main
     defaults = {
         count: 5,
