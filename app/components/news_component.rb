@@ -17,7 +17,7 @@ type: [:latest] type of render
         date_view: true,
         type: :latest
     }
-    merge(defaults)
+    merge!(defaults)
 
     view_news
   end
